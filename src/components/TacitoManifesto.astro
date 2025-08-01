@@ -1,0 +1,53 @@
+---
+const principles = [
+    {
+      title: "Desde la esencia, no la moda",
+      description: "Cada decisión nace de lo que tu marca realmente es, no de las tendencias del momento."
+    },
+    {
+      title: "Del logo al ladrillo",
+      description: "Pensamos cada detalle: desde el símbolo hasta cómo se siente el espacio que lo alberga."
+    },
+    {
+      title: "Forma y fondo en un solo lenguaje",
+      description: "Lo que se ve y lo que se vive hablan el mismo idioma, con la misma autenticidad."
+    },
+    {
+      title: "Nos involucramos como si el proyecto fuera propio",
+      description: "Tu visión se convierte en nuestra pasión. Tu éxito, en nuestro compromiso."
+    }
+  ];
+---
+
+<section class="py-24 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="font-serif text-3xl md:text-[40px] font-light text-gray-800 mb-8">
+        Nuestro Manifiesto
+      </h2>
+      <p class="font-body text-xl text-gray-600 max-w-2xl mx-auto">
+        Los principios que guían cada proyecto, cada decisión, cada línea que trazamos.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {principles.map((principle, index) => (
+        <div
+          class="group p-8 border border-border/30 hover:border-orange-700/50 smooth-transition hover-lift bg-card/50"
+        >
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0 w-2 h-2 bg-orange-700 rounded-full mt-3" />
+            <div>
+              <h3 class="font-light text-xl text-gray-900 mb-4 group-hover:text-orange-700 smooth-transition">
+                {principle.title}
+              </h3>
+              <p class="font-body text-gray-600 leading-relaxed">
+                {principle.description}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,140 @@
+---
+import { Image } from 'astro:assets';
+import projects from '../data/projects.json';
+---
+
+<div class="min-h-screen bg-white" id="proyectos">
+  <!-- Masonry Grid - Implementación con horizontalOrder -->
+  <div class="grid mx-auto py-4 px-2 md:px-4 lg:px-6 md:pt-0" id="masonryGrid">
+    {projects.map((project, index) => (
+      <a href={`/project/${project.slug}`} class="grid-item w-80 md:w-80 opacity-0 translate-y-8 transition-all duration-1000 ease-out mb-2.5 bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl block" data-project-id={project.id}>
+        <div class="overflow-hidden bg-gray-100">
+          <Image 
+            src={project.image} 
+            alt={project.alt}
+            class="w-full h-auto block transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+            decoding="async"
+            width={320}
+            height={320}
+          />
+        </div>
+        <div class="p-3">
+          <h3 class="text-base font-semibold text-gray-900 mb-1">{project.title}</h3>
+          <p class="text-sm text-gray-500 uppercase tracking-wide">{project.brand}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 4L4 12H9V20H15V12H20L12 4Z" fill="currentColor"/>
+    </svg>
+    TOP
+  </button>
+</div>
+
+<script>
+  import Masonry from 'masonry-layout';
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.querySelector('#masonryGrid');
+    
+    if (grid) {
+      // Inicialización de Masonry con horizontalOrder
+      const masonry = new Masonry(grid, {
+        itemSelector: '.grid-item',
+        columnWidth: 320, // Ancho fijo de columna
+        horizontalOrder: true,
+        gutter: 10,
+        transitionDuration: '0.3s',
+      });
+
+      // Layout después de que las imágenes carguen
+      const images = grid.querySelectorAll('img');
+      let loadedImages = 0;
+      
+      images.forEach(img => {
+        if (img.complete) {
+          loadedImages++;
+          if (loadedImages === images.length) {
+            (masonry as any).layout();
+          }
+        } else {
+          img.addEventListener('load', () => {
+            loadedImages++;
+            if (loadedImages === images.length) {
+              (masonry as any).layout();
+            }
+          });
+        }
+      });
+
+      // Re-layout en resize
+      window.addEventListener('resize', () => {
+        (masonry as any).layout();
+      });
+
+      // Intersection Observer para animaciones de fade-in
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+          }
+        });
+      }, observerOptions);
+
+      // Observar todos los elementos del grid
+      const gridItems = document.querySelectorAll('.grid-item');
+      gridItems.forEach(item => {
+        observer.observe(item);
+      });
+    }
+
+    // Scroll to top functionality
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    
+    if (scrollTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          scrollTopBtn.classList.add('visible');
+        } else {
+          scrollTopBtn.classList.remove('visible');
+        }
+      });
+
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+  });
+</script>
+
+<style>
+  /* clearfix */
+  .grid:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+
+  @media (max-width: 480px) {
+    .grid-item {
+      width: 100% !important;
+      left: 0 !important;
+      position: relative !important;
+      top: 0 !important;
+    }
+  }
+</style> 

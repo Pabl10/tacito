@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Portfolio from '../components/Portfolio.astro';
+---
+
+<Layout 
+  title="Proyectos - TÁCITO Portfolio de Diseño"
+  description="Explora nuestro portfolio de proyectos de branding, diseño espacial e interactivo. Casos de éxito que demuestran nuestro enfoque integral en diseño y experiencia de marca."
+>
+  <Header />
+  
+  <div class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <section class="py-20 px-6 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Back Button -->
+        <div class="text-left mb-8">
+          <a href="/" class="inline-flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors uppercase tracking-wide">
+            ← VOLVER AL INICIO
+          </a>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-serif text-gray-800 mb-8 font-light leading-tight">
+          Nuestros Proyectos
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 mb-12 font-light">
+          Una colección de experiencias que hemos creado para marcas 
+          que buscan trascender lo convencional.
+        </p>
+        <div class="w-24 h-1 bg-orange-300 mx-auto"></div>
+      </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="py-12 px-6 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <button class="px-6 py-3 bg-gray-900 text-white text-sm font-medium uppercase tracking-wider hover:bg-gray-800 transition-colors">
+            Todos
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-600 text-sm font-medium uppercase tracking-wider hover:bg-gray-50 transition-colors border border-gray-200">
+            Branding
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-600 text-sm font-medium uppercase tracking-wider hover:bg-gray-50 transition-colors border border-gray-200">
+            Interactive
+          </button>
+          <button class="px-6 py-3 bg-white text-gray-600 text-sm font-medium uppercase tracking-wider hover:bg-gray-50 transition-colors border border-gray-200">
+            Espacial
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="bg-white">
+      <Portfolio />
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-6 bg-gray-900">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-serif text-white mb-6 font-light">
+          ¿Tienes un proyecto en mente?
+        </h2>
+        <p class="text-lg text-gray-300 mb-8">
+          Conversemos sobre cómo podemos ayudarte a crear una experiencia 
+          que conecte profundamente con tu audiencia.
+        </p>
+        <a href="/contacto" class="inline-block border-2 border-orange-300 bg-transparent text-orange-300 px-8 py-3 rounded-none text-sm font-medium uppercase tracking-wider hover:bg-orange-300 hover:text-white transition-all duration-300">
+          Iniciar Proyecto
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout> 

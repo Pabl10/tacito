@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+---
+
+<Layout 
+  title="Nosotros - TÁCITO Estudio de Diseño"
+  description="Conoce nuestro equipo y misión. Somos TÁCITO, un estudio de diseño que transforma ideas en experiencias tangibles. Especialistas en branding emocional y diseño espacial."
+>
+  <Header />
+  
+  <div class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <!-- Back Button -->
+        <div class="text-left mb-8">
+          <a href="/" class="inline-flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors uppercase tracking-wide">
+            ← VOLVER AL INICIO
+          </a>
+        </div>
+        
+        <h1 class="text-4xl md:text-6xl font-serif text-gray-800 mb-8 font-light leading-tight">
+          Somos TÁCITO
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 mb-12 font-light">
+          Un estudio de diseño que transforma ideas en experiencias tangibles.
+        </p>
+        <div class="w-24 h-1 bg-orange-300 mx-auto"></div>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-serif text-gray-800 mb-6 font-light">
+              Nuestra Misión
+            </h2>
+            <p class="text-lg text-gray-600 leading-relaxed mb-6">
+              Diseñamos marcas que se pueden habitar. Creemos en la capacidad del diseño para crear espacios 
+              que no solo se ven, sino que se sienten y se experimentan de manera profunda.
+            </p>
+            <p class="text-lg text-gray-600 leading-relaxed">
+              Cada proyecto es una oportunidad para construir universos visuales que conecten emocionalmente 
+              con las personas y transformen la manera en que interactúan con las marcas.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-sm">
+            <h3 class="text-2xl font-serif text-gray-800 mb-4 font-light">Nuestros Valores</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-orange-300 rounded-full mt-2 mr-4"></div>
+                <span class="text-gray-700">Diseño con propósito y significado</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-orange-300 rounded-full mt-2 mr-4"></div>
+                <span class="text-gray-700">Experiencias que trascienden lo visual</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-orange-300 rounded-full mt-2 mr-4"></div>
+                <span class="text-gray-700">Innovación desde la simplicidad</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-2 h-2 bg-orange-300 rounded-full mt-2 mr-4"></div>
+                <span class="text-gray-700">Conexión emocional con las audiencias</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif text-gray-800 mb-4 font-light">
+            Nuestro Equipo
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Un grupo de diseñadores apasionados por crear experiencias memorables 
+            y marcas que dejan huella en el mundo.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-xl font-sans text-gray-800 mb-2">María González</h3>
+            <p class="text-gray-600">Directora Creativa</p>
+          </div>
+          <div class="text-center">
+            <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-xl font-sans text-gray-800 mb-2">Carlos Ruiz</h3>
+            <p class="text-gray-600">Diseñador Senior</p>
+          </div>
+          <div class="text-center">
+            <div class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4"></div>
+            <h3 class="text-xl font-sans text-gray-800 mb-2">Ana Martínez</h3>
+            <p class="text-gray-600">Estratega de Marca</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-6 bg-gray-900">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-serif text-white mb-6 font-light">
+          ¿Listo para crear algo extraordinario?
+        </h2>
+        <p class="text-lg text-gray-300 mb-8">
+          Conversemos sobre tu proyecto y cómo podemos ayudarte a construir 
+          una marca que trascienda lo convencional.
+        </p>
+        <a href="/contacto" class="inline-block border-2 border-orange-300 bg-transparent text-orange-300 px-8 py-3 rounded-none text-sm font-medium uppercase tracking-wider hover:bg-orange-300 hover:text-white transition-all duration-300">
+          Iniciar Conversación
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout> 

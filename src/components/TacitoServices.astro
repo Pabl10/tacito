@@ -1,0 +1,47 @@
+---
+const services = [
+  {
+    title: "Branding Emocional + Conceptual",
+    description: "Naming, logotipo, sistema gráfico, tono, narrativa, universos visuales.",
+    icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
+  },
+  {
+    title: "Diseño Espacial de Marca",
+    description: "Interiorismo comercial, ambientación, arquitectura conceptual, señalética, experiencia de usuario.",
+    icon: "M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+  },
+  {
+    title: "Cápsulas de Identidad",
+    description: "Proyectos compactos e integrales donde creamos el ADN completo de una marca lista para abrir sus puertas al mundo.",
+    icon: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+  }
+];
+---
+
+<section class="py-24 px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="font-serif text-3xl md:text-5xl font-light text-gray-800 mb-8">
+        Nuestro Enfoque Integral
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      {services.map((service) => (
+        <div class="text-center group hover:transform hover:scale-105 transition-transform duration-300 bg-white p-8 rounded-sm border border-gray-200">
+          <div class="flex justify-center mb-6">
+            <svg class="w-8 h-8 text-orange-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={service.icon} />
+            </svg>
+          </div>
+          <h3 class="font-sans text-[20px] text-gray-900 mb-4 group-hover:text-orange-300 transition-colors font-light">
+            {service.title}
+          </h3>
+          <p class="font-sans text-gray-600 leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

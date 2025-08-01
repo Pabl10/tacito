@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+---
+
+<section class="py-24 px-6 bg-gray-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="relative">
+          <Image 
+            src="/src/assets/visionary-client.jpg" 
+            alt="Cliente visionario de Tácito"
+            class="w-full h-auto rounded-sm shadow-lg"
+            width={500}
+            height={500}
+          />
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-700/20 to-transparent" />
+        </div>
+      </div>
+      
+      <div>
+        <h2 class="font-serif text-3xl md:text-[40px] font-light text-gray-800 mb-8">
+          Para Visionarios
+        </h2>
+        
+        <blockquote class="border-l-4 border-orange-600 pl-6 mb-8">
+          <p class="font-serif text-2xl text-primary italic leading-relaxed">
+            "Creamos para quienes quieren construir desde su esencia."
+          </p>
+        </blockquote>
+        
+        <div class="font-body text-lg text-foreground leading-relaxed space-y-4">
+          <p>
+            Para empresarios, creadores y desarrolladores de marcas que buscan 
+            diferenciación real, visión artística y un enfoque 100% estratégico y funcional.
+          </p>
+          <p class="text-orange-700 font-medium">
+            Si tu proyecto tiene alma, nosotros le damos forma.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

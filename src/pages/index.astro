@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import TacitoHero from '../components/TacitoHero.astro';
+import TacitoPhilosophy from '../components/TacitoPhilosophy.astro';
+import TacitoServices from '../components/TacitoServices.astro';
+import TacitoPortfolio from '../components/TacitoPortfolio.astro';
+import TacitoClient from '../components/TacitoClient.astro';
+import TacitoManifesto from '../components/TacitoManifesto.astro';
+import TacitoCTA from '../components/TacitoCTA.astro';
+import Header from '../components/Header.astro';
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+  title="TÁCITO - Estudio de Diseño y Branding"
+  description="Somos TÁCITO, un estudio de diseño que transforma ideas en experiencias tangibles. Especialistas en branding emocional, diseño espacial y cápsulas de identidad. Diseñamos marcas que se pueden habitar."
+>
+	<div class="min-h-screen bg-white">
+		<Header />
+		<TacitoHero />
+		<TacitoPhilosophy />
+		<TacitoServices />
+		<TacitoPortfolio />
+		<TacitoClient />
+		<TacitoManifesto />
+		<TacitoCTA />
+	</div>
 </Layout>
