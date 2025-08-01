@@ -10,4 +10,7 @@ export default defineConfig({
   site: 'https://pabl10.github.io',
   base: '/tacito',
   outDir: './dist',
+  build: {
+    assets: '_astro',
+  },
 });
