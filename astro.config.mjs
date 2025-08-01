@@ -13,4 +13,7 @@ export default defineConfig({
   build: {
     assets: '_astro',
   },
+  vite: {
+    base: '/tacito/',
+  },
 });
