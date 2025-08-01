@@ -1,4 +1,6 @@
 ---
+import { getBasePath } from '../utils/paths';
+
 interface Props {
   title?: string;
   description?: string;
@@ -10,6 +12,8 @@ const {
   description = "Somos TÁCITO, un estudio de diseño que transforma ideas en experiencias tangibles. Especialistas en branding emocional, diseño espacial y cápsulas de identidad.",
   canonicalURL = new URL(Astro.url.pathname, 'https://pabl10.github.io/tacito').href
 } = Astro.props;
+
+const basePath = getBasePath();
 ---
 
 <!doctype html>
@@ -17,8 +21,8 @@ const {
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/svg+xml" href="/tacitoNaranja.svg" />
-		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="icon" type="image/svg+xml" href={`${basePath}/tacitoNaranja.svg`} />
+		<link rel="manifest" href={`${basePath}/site.webmanifest`} />
 		<meta name="generator" content={Astro.generator} />
 		
 		<!-- SEO Meta Tags -->
