@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import projects from '../../data/projects.json';
+import { navLink, projectImageUrl } from '../../utils/paths';
 
 // Get the project slug from the URL params
 export async function getStaticPaths() {
@@ -28,7 +29,7 @@ if (!project) {
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div class="flex justify-between items-center px-6 py-4">
         <!-- Back Button -->
-        <a href="/" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors uppercase tracking-wide">
+        <a href={navLink("/")} class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors uppercase tracking-wide">
           ← VOLVER
         </a>
         
@@ -49,7 +50,7 @@ if (!project) {
       <div class="mb-12">
         <div class="relative bg-gray-50 rounded-lg overflow-hidden shadow-lg">
           <img 
-            src={project.image} 
+            src={projectImageUrl(project.image)} 
             alt={project.alt}
             class="w-full h-auto block"
             loading="eager"
@@ -95,7 +96,7 @@ if (!project) {
             <!-- Main Image -->
             <div class="w-full mb-[45px]">
               <img
-                src={config.main_image}
+                src={projectImageUrl(config.main_image)}
                 alt={project.alt}
                 class="w-full h-auto block rounded-lg shadow"
                 loading="lazy"
@@ -107,14 +108,14 @@ if (!project) {
             {config.secondary_image && config.tertiary_image && (
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-[45px]">
                 <img
-                  src={config.secondary_image}
+                  src={projectImageUrl(config.secondary_image)}
                   alt={project.alt}
                   class="w-full h-auto block rounded-lg shadow"
                   loading="lazy"
                   decoding="async"
                 />
                 <img
-                  src={config.tertiary_image}
+                  src={projectImageUrl(config.tertiary_image)}
                   alt={project.alt}
                   class="w-full h-auto block rounded-lg shadow"
                   loading="lazy"
@@ -128,7 +129,7 @@ if (!project) {
               <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 {config.gallery_images?.map((img, idx) => (
                   <img
-                    src={img}
+                    src={projectImageUrl(img)}
                     alt={project.alt}
                     class="w-full h-auto block rounded-lg shadow"
                     loading="lazy"
@@ -160,7 +161,7 @@ if (!project) {
     <!-- Back to Projects Button -->
     <div class="max-w-6xl mx-auto px-6 pb-12">
       <a 
-        href="/" 
+        href={navLink("/")} 
         class="inline-flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors uppercase tracking-wide"
       >
         ← VER TODOS LOS PROYECTOS

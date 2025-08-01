@@ -22,4 +22,11 @@ export function navLink(path: string): string {
 // Helper function for asset URLs
 export function assetUrl(path: string): string {
   return createUrl(`/assets${path}`);
+}
+
+// Helper function for project image URLs
+export function projectImageUrl(path: string): string {
+  // Remove /tacito prefix if it exists and convert to dynamic path
+  const cleanPath = path.replace('/tacito', '');
+  return assetUrl(cleanPath.replace('/assets', ''));
 } 
