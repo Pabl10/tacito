@@ -6,6 +6,15 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,6 +44,9 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
