@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { assetUrl } from "../utils/paths";
 ---
 
 <section class="py-24 px-6 bg-gray-50">
@@ -8,7 +9,7 @@ import { Image } from "astro:assets";
       <div>
         <div class="relative">
           <Image 
-            src="/tacito/assets/visionary-client.jpg" 
+            src={assetUrl("/visionary-client.jpg")} 
             alt="Cliente visionario de Tácito"
             class="w-full h-auto rounded-sm shadow-lg"
             width={500}

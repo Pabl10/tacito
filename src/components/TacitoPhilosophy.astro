@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { assetUrl } from "../utils/paths";
 ---
 
 <section class="py-24 px-6">
@@ -24,7 +25,7 @@ import { Image } from "astro:assets";
       <div class="order-1 lg:order-2">
         <div class="relative group hover-lift">
           <Image 
-            src="/tacito/assets/brand-architecture-fusion.jpg" 
+            src={assetUrl("/brand-architecture-fusion.jpg")} 
             alt="Fusión conceptual de marca y arquitectura"
             class="w-full h-auto rounded-sm shadow-lg"
             width={500}
