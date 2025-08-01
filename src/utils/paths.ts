@@ -26,7 +26,10 @@ export function assetUrl(path: string): string {
 
 // Helper function for project image URLs
 export function projectImageUrl(path: string): string {
-  // Remove /tacito prefix if it exists and convert to dynamic path
-  const cleanPath = path.replace('/tacito', '');
-  return assetUrl(cleanPath.replace('/assets', ''));
+  // In development, use relative paths
+  if (import.meta.env.DEV) {
+    return path.replace('/tacito', '');
+  }
+  // In production, use full paths
+  return path;
 } 

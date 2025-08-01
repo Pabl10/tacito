@@ -17,7 +17,5 @@ export default defineConfig({
   build: {
     assets: '_astro',
   },
-  vite: {
-    base: isDev ? '/' : '/tacito/',
-  },
+  // Remove vite.base configuration to fix development issues
 });
