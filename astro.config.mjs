@@ -7,4 +7,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  site: 'https://pabl10.github.io',
+  base: '/tacito',
+  outDir: './dist',
 });

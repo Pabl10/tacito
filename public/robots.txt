@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tacito.com/sitemap.xml 
+Sitemap: https://pabl10.github.io/tacito/sitemap.xml 

@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro';
 import projects from '../data/projects.json';
 
 export const GET: APIRoute = () => {
-  const baseUrl = 'https://tacito.com'; // Cambia esto por tu dominio real
+  const baseUrl = 'https://pabl10.github.io/tacito'; // GitHub Pages URL
   
   const pages = [
     '',

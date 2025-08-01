@@ -8,7 +8,7 @@ interface Props {
 const { 
   title = "TÁCITO - Estudio de Diseño y Branding", 
   description = "Somos TÁCITO, un estudio de diseño que transforma ideas en experiencias tangibles. Especialistas en branding emocional, diseño espacial y cápsulas de identidad.",
-  canonicalURL = Astro.url.href
+  canonicalURL = new URL(Astro.url.pathname, 'https://pabl10.github.io/tacito').href
 } = Astro.props;
 ---
 
