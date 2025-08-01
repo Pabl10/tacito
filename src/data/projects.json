@@ -4,30 +4,30 @@
     "title": "BENZAO",
     "slug": "benzao",
     "brand": "Branding, Interactive",
-    "image": "/src/assets/benzao/benzao.webp",
-    "banner_portada": "/src/assets/benzao/benzao.webp",
+    "image": "/assets/benzao/benzao.webp",
+    "banner_portada": "/assets/benzao/benzao.webp",
     "alt": "Benzao branding project",
     "configuration_images": [
       {
-        "main_image": "/src/assets/benzao/benzao.webp",
-        "secondary_image": "/src/assets/benzao/benzao.webp",
-        "tertiary_image": "/src/assets/benzao/benzao.webp",
+        "main_image": "/assets/benzao/benzao.webp",
+        "secondary_image": "/assets/benzao/benzao.webp",
+        "tertiary_image": "/assets/benzao/benzao.webp",
         "gallery_images": [
-          "/src/assets/benzao/benzao.webp",
-          "/src/assets/benzao/benzao.webp",
-          "/src/assets/benzao/benzao.webp",
-          "/src/assets/benzao/benzao.webp",
-          "/src/assets/benzao/benzao.webp",
-          "/src/assets/benzao/benzao.webp",
-          "/src/assets/benzao/benzao.webp",
-          "/src/assets/benzao/benzao.webp"
+          "/assets/benzao/benzao.webp",
+          "/assets/benzao/benzao.webp",
+          "/assets/benzao/benzao.webp",
+          "/assets/benzao/benzao.webp",
+          "/assets/benzao/benzao.webp",
+          "/assets/benzao/benzao.webp",
+          "/assets/benzao/benzao.webp",
+          "/assets/benzao/benzao.webp"
         ]
       },
       {
-        "main_image": "/src/assets/benzao/benzao.webp"
+        "main_image": "/assets/benzao/benzao.webp"
       },
       {
-        "main_image": "/src/assets/benzao/benzao.webp"
+        "main_image": "/assets/benzao/benzao.webp"
       }
     ]
   },
@@ -36,17 +36,17 @@
     "title": "BOARD",
     "slug": "board",
     "brand": "Interactive",
-    "image": "/src/assets/board/board.webp",
-    "banner_portada": "/src/assets/board/board.webp",
+    "image": "/assets/board/board.webp",
+    "banner_portada": "/assets/board/board.webp",
     "alt": "Board interactive project",
     "configuration_images": [
       {
-        "main_image": "/src/assets/board/board.webp",
-        "secondary_image": "/src/assets/board/board.webp",
-        "tertiary_image": "/src/assets/board/board.webp",
+        "main_image": "/assets/board/board.webp",
+        "secondary_image": "/assets/board/board.webp",
+        "tertiary_image": "/assets/board/board.webp",
         "gallery_images": [
-          "/src/assets/board/board.webp",
-          "/src/assets/board/board.webp"
+          "/assets/board/board.webp",
+          "/assets/board/board.webp"
         ]
       }
     ]
@@ -56,17 +56,17 @@
     "title": "DASHI",
     "slug": "dashi",
     "brand": "Archive 2023",
-    "image": "/src/assets/dashi/dashi.webp",
-    "banner_portada": "/src/assets/dashi/dashi.webp",
+    "image": "/assets/dashi/dashi.webp",
+    "banner_portada": "/assets/dashi/dashi.webp",
     "alt": "Dashi archive project",
     "configuration_images": [
       {
-        "main_image": "/src/assets/dashi/dashi.webp",
-        "secondary_image": "/src/assets/dashi/dashi.webp",
-        "tertiary_image": "/src/assets/dashi/dashi.webp",
+        "main_image": "/assets/dashi/dashi.webp",
+        "secondary_image": "/assets/dashi/dashi.webp",
+        "tertiary_image": "/assets/dashi/dashi.webp",
         "gallery_images": [
-          "/src/assets/dashi/dashi.webp",
-          "/src/assets/dashi/dashi.webp"
+          "/assets/dashi/dashi.webp",
+          "/assets/dashi/dashi.webp"
         ]
       }
     ]
@@ -76,16 +76,16 @@
     "title": "JOROBADA",
     "slug": "jorobada",
     "brand": "Branding, Interactive",
-    "image": "/src/assets/jorobada/jorobada.webp",
-    "banner_portada": "/src/assets/jorobada/jorobada.webp",
+    "image": "/assets/jorobada/jorobada.webp",
+    "banner_portada": "/assets/jorobada/jorobada.webp",
     "alt": "Jorobada branding project",
     "configuration_images": [
       {
-        "main_image": "/src/assets/jorobada/jorobada.webp",
-        "secondary_image": "/src/assets/jorobada/jorobada.webp",
-        "tertiary_image": "/src/assets/jorobada/jorobada.webp",
+        "main_image": "/assets/jorobada/jorobada.webp",
+        "secondary_image": "/assets/jorobada/jorobada.webp",
+        "tertiary_image": "/assets/jorobada/jorobada.webp",
         "gallery_images": [
-          "/src/assets/jorobada/jorobada.webp"
+          "/assets/jorobada/jorobada.webp"
         ]
       }
     ]
@@ -95,17 +95,17 @@
     "title": "CROISSAINT",
     "slug": "croissanint",
     "brand": "Branding, Interactive",
-    "image": "/src/assets/croissanint/croissanint.webp",
-    "banner_portada": "/src/assets/croissanint/croissanint.webp",
+    "image": "/assets/croissanint/croissanint.webp",
+    "banner_portada": "/assets/croissanint/croissanint.webp",
     "alt": "CROISSAINT branding project",
     "configuration_images": [
       {
-        "main_image": "/src/assets/croissanint/croissanint.webp",
-        "secondary_image": "/src/assets/croissanint/croissanint.webp",
-        "tertiary_image": "/src/assets/croissanint/croissanint.webp",
+        "main_image": "/assets/croissanint/croissanint.webp",
+        "secondary_image": "/assets/croissanint/croissanint.webp",
+        "tertiary_image": "/assets/croissanint/croissanint.webp",
         "gallery_images": [
-          "/src/assets/croissanint/croissanint.webp",
-          "/src/assets/croissanint/croissanint.webp"
+          "/assets/croissanint/croissanint.webp",
+          "/assets/croissanint/croissanint.webp"
         ]
       }
     ]
