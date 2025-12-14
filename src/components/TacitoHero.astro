@@ -5,17 +5,17 @@ import { assetUrl } from "../utils/paths";
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
   <!-- Background texture -->
   <div 
-    class="absolute inset-0 opacity-40"
-    style={`background-image: url('${assetUrl("/hero-texture.jpg")}'); background-size: cover; background-position: center; filter: contrast(1.2) brightness(0.8);`}
+    class="absolute inset-0"
+    style={`background-image: url('${assetUrl("/test-1.jpg")}'); background-size: cover; background-position: center;`}
   />
   
   <!-- Content -->
   <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
-    <h1 class="text-3xl md:text-5xl font-serif text-gray-800 mb-6 leading-tight font-light">
+    <h1 class="text-3xl md:text-5xl text-gray-800 mb-6 leading-tight font-bold">
       Diseñamos marcas<br />
       que se pueden habitar.
     </h1>
-    <h2 class="text-xl md:text-2xl font-sans text-gray-600 mb-12 font-light">
+    <h2 class="text-xl md:text-2xl text-gray-600 mb-12 font-medium">
       Espacios que se pueden sentir.
     </h2>
     
@@ -27,5 +27,5 @@ import { assetUrl } from "../utils/paths";
   </div>
   
   <!-- Gradient overlay -->
-  <div class="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/60" />
+  <!-- <div class="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/60" /> -->
 </section>

@@ -2,15 +2,15 @@
   "name": "TÁCITO - Estudio de Diseño",
   "short_name": "TÁCITO",
   "description": "Estudio de diseño que transforma ideas en experiencias tangibles. Especialistas en branding emocional, diseño espacial y cápsulas de identidad.",
-  "start_url": "./",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#f97316",
   "icons": [
     {
-      "src": "./tacitoNaranja.svg",
-      "sizes": "any",
-      "type": "image/svg+xml"
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
     }
   ]
 } 
