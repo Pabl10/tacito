@@ -3,6 +3,29 @@ import Layout from '../../layouts/Layout.astro';
 import projects from '../../data/projects.json';
 import { navLink, projectImageUrl } from '../../utils/paths';
 
+// Type definitions for sections
+interface FullWidthSection {
+  type: 'full-width';
+  image: string;
+  description?: string;
+  details?: {
+    title: string;
+    description: string;
+  }[];
+}
+
+interface Grid2Section {
+  type: 'grid-2';
+  images: string[];
+}
+
+interface Gallery3Section {
+  type: 'gallery-3';
+  images: string[];
+}
+
+type Section = FullWidthSection | Grid2Section | Gallery3Section;
+
 // Get the project slug from the URL params
 export async function getStaticPaths() {
   return projects.map((project) => ({
@@ -46,11 +69,11 @@ if (!project) {
 
     <!-- Main Content -->
     <main class="max-w-6xl mx-auto px-6 py-8">
-      <!-- Hero Section with Project Image -->
+      <!-- Hero Section with Main Image (siempre primero) -->
       <div class="mb-12">
         <div class="relative bg-gray-50 rounded-lg overflow-hidden shadow-lg">
           <img 
-            src={projectImageUrl(project.image)} 
+            src={projectImageUrl(project.content?.main?.image || project.image)} 
             alt={project.alt}
             class="w-full h-auto block"
             loading="eager"
@@ -58,97 +81,114 @@ if (!project) {
           />
         </div>
 
-        {project.configuration_images?.main_image?.details && (
+        {project.content?.main?.details && (
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 my-12 mx-16">
-            {project.configuration_images.main_image.details.map((detail: { title: string; description: string }) => (
+            {project.content.main.details.map((detail: { title: string; description: string }) => (
               <div class="mb-4 md:mb-0">
                 <h2 class="text-base border-b border-gray-200 pb-2 md:text-lg font-semibold text-gray-900 mb-4 uppercase tracking-wide">
                   {detail.title}
                 </h2>
-                {
-                  detail.description && (
-                    <p class="text-sm md:text-base text-gray-600 leading-relaxed">
-                      {detail.description}
-                    </p>
-                  )
-                }
+                {detail.description && (
+                  <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                    {detail.description}
+                  </p>
+                )}
               </div>
             ))}
           </div>
         )}
       </div>
 
-      <!-- Information Section - Dynamic from configuration_images -->
-      <div>
-        <!-- Configuración de imágenes -->
-        {project.configuration_images?.details_images && (
-          <div class="mb-12">
-            <!-- Details Images -->
-            {project.configuration_images.details_images.length > 0 && (
-              <div class="grid grid-cols-1 md:grid-cols-1 gap-6 mb-[45px] w-full">
-                {project.configuration_images.details_images.map((img: { image: string; description: string }) => (
+      <!-- Dynamic Sections -->
+      {project.content?.sections && (
+        <div class="space-y-12">
+          {project.content.sections.map((section: any) => {
+            // Full Width Section - Imagen del mismo tamaño que main con descripción
+            if (section.type === 'full-width') {
+              return (
+                <div class="w-full">
                   <img
-                    src={projectImageUrl(img.image)}
-                    alt={img.description}
+                    src={projectImageUrl(section.image)}
+                    alt={section.description || project.alt}
                     class="w-full h-auto block rounded-lg shadow"
                     loading="lazy"
                     decoding="async"
                   />
-                  <p class="text-center text-2xl font-medium">{img.description}</p>
-                ))}
-              </div>
-            )}
+                  {section.description && (
+                    <p class="text-center text-2xl font-medium mt-4">{section.description}</p>
+                  )}
+                  {section.details && (
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 my-12 mx-16">
+                      {section.details.map((detail: { title: string; description: string }) => (
+                        <div class="mb-4 md:mb-0">
+                          <h2 class="text-base border-b border-gray-200 pb-2 md:text-lg font-semibold text-gray-900 mb-4 uppercase tracking-wide">
+                            {detail.title}
+                          </h2>
+                          {detail.description && (
+                            <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+                              {detail.description}
+                            </p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+            
+            // Grid 2 Columns Section
+            if (section.type === 'grid-2') {
+              return (
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {section.images.map((img: string) => (
+                    <img
+                      src={projectImageUrl(img)}
+                      alt={project.alt}
+                      class="w-full h-auto block rounded-lg shadow"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ))}
+                </div>
+              );
+            }
+            
+            // Gallery 3 Columns Section (Six Pack)
+            if (section.type === 'gallery-3') {
+              return (
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {section.images.map((img: string) => (
+                    <img
+                      src={projectImageUrl(img)}
+                      alt={project.alt}
+                      class="w-full h-[300px] object-cover block rounded-lg shadow"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  ))}
+                </div>
+              );
+            }
+            
+            return null;
+          })}
+        </div>
+      )}
 
-            <!-- Secondary & Tertiary Images (2 columns) -->
-            {project.configuration_images.secondary_image && project.configuration_images.tertiary_image && (
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-[45px]">
-                <img
-                  src={projectImageUrl(project.configuration_images.secondary_image)}
-                  alt={project.alt}
-                  class="w-full h-auto block rounded-lg shadow"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <img
-                  src={projectImageUrl(project.configuration_images.tertiary_image)}
-                  alt={project.alt}
-                  class="w-full h-auto block rounded-lg shadow"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </div>
-            )}
-
-            <!-- Galería de imágenes -->
-            {project.configuration_images.gallery_images && (
-              <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-                {project.configuration_images.gallery_images?.map((img: string) => (
-                  <img
-                    src={projectImageUrl(img)}
-                    alt={project.alt}
-                    class="w-full h-[300px] block rounded-lg shadow"
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-            )}
-          </div>
-        )}
-
-        <!-- Project Details -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">CLIENT</h4>
-            <p class="text-gray-600">{project.title}</p>
-          </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">SERVICES</h4>
-            <p class="text-gray-600">{project.brand}</p>
-          </div>
-          <div>
-            <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">YEAR</h4>
-            <p class="text-gray-600">2024</p>
-          </div>
+      <!-- Project Details -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-200">
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">CLIENT</h4>
+          <p class="text-gray-600">{project.client}</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">SERVICES</h4>
+          <p class="text-gray-600">{project.services}</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-2">YEAR</h4>
+          <p class="text-gray-600">{project.year}</p>
         </div>
       </div>
     </main>
@@ -163,4 +203,4 @@ if (!project) {
       </a>
     </div>
   </div>
-</Layout> 
+</Layout>

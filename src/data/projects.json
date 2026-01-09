@@ -1,19 +1,22 @@
 [
   {
-    "id": 1,
-    "title": "BENZAO",
-    "slug": "benzao",
+    "id": 2,
+    "title": "JOROBADA",
+    "slug": "jorobada",
     "brand": "Branding, Interactive",
-    "image": "/assets/benzao/benzao.webp",
-    "banner_portada": "/assets/benzao/benzao.webp",
-    "alt": "Benzao branding project",
-    "configuration_images": {
-      "main_image": {
-        "image": "/assets/benzao/benzao.webp",
+    "image": "/assets/jorobada/jorobada.webp",
+    "banner_portada": "/assets/jorobada/main.jpg",
+    "alt": "Jorobada branding project",
+    "client": "JOROBADA",
+    "services": "Branding, Interactive",
+    "year": "2024",
+    "content": {
+      "main": {
+        "image": "/assets/jorobada/main.jpg",
         "details": [
           {
             "title": "The client",
-            "description": "El Montero, is a restaurant located in Saltillo Coahuila, a city very close to the Mexican northern border. Its kitchen represents the restaurant's surroundings as it is located on one of Mexico's deserts. El Montero's menu is inspired on regional food, integrating elements from contemporary kitchens. "
+            "description": "El Montero, is a restaurant located in Saltillo Coahuila, a city very close to the Mexican northern border. Its kitchen represents the restaurant's surroundings as it is located on one of Mexico's deserts. El Montero's menu is inspired on regional food, integrating elements from contemporary kitchens."
           },
           {
             "title": "keywords",
@@ -21,71 +24,158 @@
           }
         ]
       },
-      "details_images": [
+      "sections": [
         {
-          "image": "/assets/benzao/benzao.webp",
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/1.jpg",
           "description": "Benzao branding project"
         },
         {
-          "image": "/assets/benzao/benzao.webp",
-          "description": "Benzao branding project"
-        }
-      ],
-      "secondary_image": "/assets/benzao/benzao.webp",
-      "tertiary_image": "/assets/benzao/benzao.webp",
-      "gallery_images": [
-        "/assets/benzao/benzao.webp",
-        "/assets/benzao/benzao.webp",
-        "/assets/benzao/benzao.webp",
-        "/assets/benzao/benzao.webp",
-        "/assets/benzao/benzao.webp",
-        "/assets/benzao/benzao.webp",
-        "/assets/benzao/benzao.webp",
-        "/assets/benzao/benzao.webp"
-      ]
-    },
-    "client": "BENZAO",
-    "services": "Branding, Interactive",
-    "year": "2024"
-  },
-  {
-    "id": 2,
-    "title": "BOARD",
-    "slug": "board",
-    "brand": "Interactive",
-    "image": "/assets/board/board.webp",
-    "banner_portada": "/assets/board/board.webp",
-    "alt": "Board interactive project",
-    "configuration_images": {
-      "main_image": {
-        "image": "/assets/board/board.webp",
-        "details": [
-          {
-            "title": "Board interactive project",
-            "description": "Board interactive project"
-          }
-        ]
-      },
-      "details_images": [
-        {
-          "image": "/assets/board/board.webp",
-          "description": "Board interactive project"
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/2.jpg"
         },
         {
-          "image": "/assets/board/board.webp",
-          "description": "Board interactive project"
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/3.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/4.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/5.jpg"
+        },
+        {
+          "type": "grid-2",
+          "images": [
+            "/assets/jorobada/grid-2/1.jpg",
+            "/assets/jorobada/grid-2/2.jpg",
+            "/assets/jorobada/grid-2/3.jpg",
+            "/assets/jorobada/grid-2/4.jpg"
+          ]
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/6.jpg",
+          "description": "Diseño de interiores"
+        },
+        {
+          "type": "grid-2",
+          "images": [
+            "/assets/jorobada/grid-2/5.jpg",
+            "/assets/jorobada/grid-2/6.jpg"
+          ]
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/7.jpg"
+        },
+        {
+          "type": "gallery-3",
+          "images": [
+            "/assets/jorobada/gallery-3/1.jpg",
+            "/assets/jorobada/gallery-3/2.jpg",
+            "/assets/jorobada/gallery-3/3.jpg",
+            "/assets/jorobada/gallery-3/4.jpg",
+            "/assets/jorobada/gallery-3/5.jpg",
+            "/assets/jorobada/gallery-3/6.jpg"
+          ]
+        },
+        {
+          "type": "grid-2",
+          "images": [
+            "/assets/jorobada/grid-2/7.jpg",
+            "/assets/jorobada/grid-2/8.jpg"
+          ]
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/8.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/9.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/10.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/11.jpg"
+        },
+        {
+          "type": "gallery-3",
+          "images": [
+            "/assets/jorobada/gallery-3/7.jpg",
+            "/assets/jorobada/gallery-3/8.jpg",
+            "/assets/jorobada/gallery-3/9.jpg",
+            "/assets/jorobada/gallery-3/10.jpg",
+            "/assets/jorobada/gallery-3/11.jpg",
+            "/assets/jorobada/gallery-3/12.jpg"
+          ]
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/12.jpg",
+          "description": "Resultado final",
+          "details": [
+            {
+              "title": "The client",
+              "description": "El Montero, is a restaurant located in Saltillo Coahuila, a city very close to the Mexican northern border. Its kitchen represents the restaurant's surroundings as it is located on one of Mexico's deserts. El Montero's menu is inspired on regional food, integrating elements from contemporary kitchens."
+            },
+            {
+              "title": "keywords",
+              "description": "Restaurant /Mexico /Branding /Interior Design /Architecture /Packaging"
+            }
+          ]
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/13.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/14.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/15.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/17.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/18.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/19.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/20.jpg"
+        },
+        {
+          "type": "full-width",
+          "image": "/assets/jorobada/full-width/21.jpg"
+        },
+        {
+          "type": "grid-2",
+          "images": [
+            "/assets/jorobada/grid-2/9.jpg",
+            "/assets/jorobada/grid-2/10.jpg",
+            "/assets/jorobada/grid-2/11.jpg",
+            "/assets/jorobada/grid-2/12.jpg",
+            "/assets/jorobada/grid-2/13.jpg",
+            "/assets/jorobada/grid-2/14.jpg"
+          ]
         }
-      ],
-      "secondary_image": "/assets/board/board.webp",
-      "tertiary_image": "/assets/board/board.webp",
-      "gallery_images": [
-        "/assets/board/board.webp",
-        "/assets/board/board.webp"
       ]
-    },
-    "client": "BOARD",
-    "services": "Interactive",
-    "year": "2024"
+    }
   },
   {
     "id": 3,
@@ -95,8 +185,11 @@
     "image": "/assets/dashi/dashi.webp",
     "banner_portada": "/assets/dashi/dashi.webp",
     "alt": "Dashi archive project",
-    "configuration_images": {
-      "main_image": {
+    "client": "DASHI",
+    "services": "Archive 2023",
+    "year": "2023",
+    "content": {
+      "main": {
         "image": "/assets/dashi/dashi.webp",
         "details": [
           {
@@ -105,64 +198,21 @@
           }
         ]
       },
-      "details_images": [
+      "sections": [
         {
+          "type": "full-width",
           "image": "/assets/dashi/dashi.webp",
           "description": "Dashi archive project"
         },
         {
-          "image": "/assets/dashi/dashi.webp",
-          "description": "Dashi archive project"
+          "type": "grid-2",
+          "images": [
+            "/assets/dashi/dashi.webp",
+            "/assets/dashi/dashi.webp"
+          ]
         }
-      ],
-      "secondary_image": "/assets/dashi/dashi.webp",
-      "tertiary_image": "/assets/dashi/dashi.webp",
-      "gallery_images": [
-        "/assets/dashi/dashi.webp",
-        "/assets/dashi/dashi.webp"
       ]
-    },
-    "client": "DASHI",
-    "services": "Archive 2023",
-    "year": "2023"
-  },
-  {
-    "id": 4,
-    "title": "JOROBADA",
-    "slug": "jorobada",
-    "brand": "Branding, Interactive",
-    "image": "/assets/jorobada/jorobada.webp",
-    "banner_portada": "/assets/jorobada/jorobada.webp",
-    "alt": "Jorobada branding project",
-    "configuration_images": {
-      "main_image": {
-        "image": "/assets/jorobada/jorobada.webp",
-        "details": [
-          {
-            "title": "Jorobada branding project",
-            "description": "Jorobada branding project"
-          }
-        ]
-      },
-      "details_images": [
-        {
-          "image": "/assets/jorobada/jorobada.webp",
-          "description": "Jorobada branding project"
-        },
-        {
-          "image": "/assets/jorobada/jorobada.webp",
-          "description": "Jorobada branding project"
-        }
-      ],
-      "secondary_image": "/assets/jorobada/jorobada.webp",
-      "tertiary_image": "/assets/jorobada/jorobada.webp",
-      "gallery_images": [
-        "/assets/jorobada/jorobada.webp"
-      ]
-    },
-    "client": "JOROBADA",
-    "services": "Branding, Interactive",
-    "year": "2024"
+    }
   },
   {
     "id": 5,
@@ -172,8 +222,11 @@
     "image": "/assets/croissanint/croissanint.webp",
     "banner_portada": "/assets/croissanint/croissanint.webp",
     "alt": "CROISSAINT branding project",
-    "configuration_images": {
-      "main_image": {
+    "client": "CROISSAINT",
+    "services": "Branding, Interactive",
+    "year": "2024",
+    "content": {
+      "main": {
         "image": "/assets/croissanint/croissanint.webp",
         "details": [
           {
@@ -182,25 +235,20 @@
           }
         ]
       },
-      "details_images": [
+      "sections": [
         {
+          "type": "full-width",
           "image": "/assets/croissanint/croissanint.webp",
           "description": "CROISSAINT branding project"
         },
         {
-          "image": "/assets/croissanint/croissanint.webp",
-          "description": "CROISSAINT branding project"
+          "type": "grid-2",
+          "images": [
+            "/assets/croissanint/croissanint.webp",
+            "/assets/croissanint/croissanint.webp"
+          ]
         }
-      ],
-      "secondary_image": "/assets/croissanint/croissanint.webp",
-      "tertiary_image": "/assets/croissanint/croissanint.webp",
-      "gallery_images": [
-        "/assets/croissanint/croissanint.webp",
-        "/assets/croissanint/croissanint.webp"
       ]
-    },
-    "client": "CROISSAINT",
-    "services": "Branding, Interactive",
-    "year": "2024"
+    }
   }
-] 
+]
